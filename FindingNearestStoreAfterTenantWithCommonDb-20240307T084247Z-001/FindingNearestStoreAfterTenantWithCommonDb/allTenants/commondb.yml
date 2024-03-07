@@ -1,0 +1,7 @@
+name: commondb
+datasource.url: jdbc:postgresql://localhost:5432/GeoCodingCommondb
+datasource.username: postgres
+datasource.password: root
+datasource.driverClassName: org.postgresql.Driver
+
+

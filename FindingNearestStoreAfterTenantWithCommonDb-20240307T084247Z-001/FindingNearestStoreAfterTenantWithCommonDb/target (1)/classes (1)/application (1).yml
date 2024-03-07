@@ -1,0 +1,73 @@
+#spring:
+#jpa:
+#database: POSTGRESQL
+#database-platform: org.hibernate.spatial.dialect.postgis.PostgisDialect
+#hibernate:
+#ddl-auto: update
+#show-sql: true
+##datasource:
+##platform: postgres
+#driverClassName: org.postgresql.Driver
+#url: jdbc:postgresql://localhost:5432/postgisdb
+#username: user
+#password: root
+#
+#
+# Store related APi
+store: /store
+add: adddetails
+find: /findStores
+
+#api key related API
+getApiKey: getApiKey
+
+# Company relate API
+companyAPI: /company
+addCompany: add
+companyLogin: login
+
+# Plan related API
+planAPI: /plan
+addPlan: addPlan
+
+# Subscription related API
+subscriptionAPI: /subscription
+addSubscription: subscribe
+
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgisdb
+    username: postgres
+    password: ${pass}
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+#      ddl-auto: update
+      show-sql: true
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/postgisdb
+
+  redis:
+    host: localhost
+    port: 6379
+
+#server:
+#  port: 8080
+#  servlet:
+#    session:
+#     timeout: 30
+
+
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 1
+
+
+defaultTenant: commondb

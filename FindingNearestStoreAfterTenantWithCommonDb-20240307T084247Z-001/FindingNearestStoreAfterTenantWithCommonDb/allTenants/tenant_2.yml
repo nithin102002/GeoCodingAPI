@@ -1,0 +1,6 @@
+name: tenant_2
+datasource.url: jdbc:postgresql://localhost:5432/GeoCodingTenant2
+datasource.username: postgres
+datasource.password: root
+datasource.driverClassName: org.postgresql.Driver
+

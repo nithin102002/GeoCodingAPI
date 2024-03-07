@@ -1,0 +1,50 @@
+#spring:
+#jpa:
+#database: POSTGRESQL
+#database-platform: org.hibernate.spatial.dialect.postgis.PostgisDialect
+#hibernate:
+#ddl-auto: update
+#show-sql: true
+##datasource:
+##platform: postgres
+#driverClassName: org.postgresql.Driver
+#url: jdbc:postgresql://localhost:5432/postgisdb
+#username: user
+#password: root
+#
+
+# Store related APi
+store: /store
+add: adddetails
+find: findStores
+
+# Company relate API
+companyAPI: /company
+addCompany: add
+companyLogin: login
+
+# Plan related API
+planAPI: /plan
+addPlan: addPlan
+
+# Subscription related API
+subscriptionAPI: /subscription
+addSubscription: subscribe
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgisdb
+    username: postgres
+    password: root
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/postgisdb
+
+
